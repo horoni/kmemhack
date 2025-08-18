@@ -1,0 +1,2 @@
+obj-m := kmemhack.o
+kmemhack-y := main.o
