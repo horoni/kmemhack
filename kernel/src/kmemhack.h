@@ -30,6 +30,11 @@
 #define DEVICE_NAME "rAnd0m"
 #define DEVICE_PATH "/dev/rAnd0m"
 
+/* Macros for extracing flags */
+#define R_FL(map) (map.flags >> 0) & 1
+#define W_FL(map) (map.flags >> 1) & 1
+#define X_FL(map) (map.flags >> 2) & 1
+
 struct __maps_t {
   pid_t pid;
   size_t start, end;

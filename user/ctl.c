@@ -32,8 +32,7 @@ int main(int argc, char **argv) {
     return 1;
   }
   printf("s:%lx e:%lx r:%d w:%d x:%d\n", req.start, req.end,
-    req.flags & PROT_READ, req.flags & PROT_WRITE,
-    req.flags & PROT_EXEC);
+    R_FL(req), W_FL(req), X_FL(req));
 
   /* GET_MEM test */
   mem_req.pid  = getpid();
